@@ -3,7 +3,6 @@ FROM mono:5.14.0.177
 ARG GITVERSION=v4.0.0-beta.14
 ARG GITVERSION_NUGET=4.0.0-beta0014
 
-#ADD https://github.com/GitTools/GitVersion/releases/download/${GITVERSION}/GitVersionDotNetCore_${GITVERSION_NUGET}.zip ${GITVERSION_HOME}/
 RUN apt-get update && apt-get install -y --no-install-recommends unzip git \
 && rm -rf /var/lib/apt/lists/*
 
